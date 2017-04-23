@@ -45,7 +45,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:drawableTop="@mipmap/ac"
-            android:text="shows" />
+            android:text="shows"
+            android:onClick="goToShows"/>
 
         <Button
             android:id="@+id/button5"
@@ -74,7 +75,8 @@
             android:layout_width="119dp"
             android:layout_height="match_parent"
             android:drawableTop="@mipmap/videog"
-            android:text="VIDEO GAMES" />
+            android:text="VIDEO GAMES"
+            android:onClick="goToVidGames"/>
 
         <Button
             android:id="@+id/button8"

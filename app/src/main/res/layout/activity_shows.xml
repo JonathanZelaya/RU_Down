@@ -49,7 +49,8 @@
                 android:layout_weight="0.07"
                 android:drawableLeft="@mipmap/cards"
                 android:text="House of Cards"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:onClick="enterLobby"/>
 
             <Button
                 android:id="@+id/button28"
@@ -59,7 +60,8 @@
                 android:layout_marginTop="16dp"
                 android:drawableLeft="@mipmap/robot"
                 android:text="Mr. Robot"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:onClick="enterLobby"/>
 
             <Button
                 android:id="@+id/button27"
@@ -69,7 +71,8 @@
                 android:layout_marginTop="16dp"
                 android:drawableLeft="@mipmap/dragonfilled"
                 android:text="Game Of Thrones"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:onClick="enterLobby"/>
 
             <Button
                 android:id="@+id/button25"
@@ -79,7 +82,8 @@
                 android:layout_marginTop="16dp"
                 android:drawableLeft="@mipmap/scifi"
                 android:text="Rick and Morty"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:onClick="enterLobby"/>
 
             <Button
                 android:id="@+id/button24"
@@ -89,7 +93,8 @@
                 android:layout_marginTop="16dp"
                 android:drawableLeft="@mipmap/starfish"
                 android:text="SpongeBob Squarepants"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:onClick="enterLobby"/>
 
             <Button
                 android:id="@+id/button29"
@@ -98,7 +103,8 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_weight="0.07"
-                android:text="Other..." />
+                android:text="Other..."
+                android:onClick="enterLobby"/>
 
         </LinearLayout>
     </ScrollView>
