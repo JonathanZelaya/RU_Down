@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         EditText emailET = (EditText) view.findViewById(R.id.et_email);
-                        final String email = emailET.getText().toString();
+                        final String email = emailET.getText().toString().replace(".","dot");
 
                         EditText passwordET = (EditText) view.findViewById(R.id.et_password);
                         String password = passwordET.getText().toString();
@@ -111,7 +111,15 @@ public class MainActivity extends AppCompatActivity {
     public void goToSports(View view){
         Intent intent = new Intent(this, SportsListActivity.class);
         startActivity(intent);
+    }
 
+    public void goToShows(View view){
+        Intent intent = new Intent(this, ShowsActivity.class);
+        startActivity(intent);
+    }
+    public void goToVidGames(View view){
+        Intent intent = new Intent(this, VideoGamesListActivity.class);
+        startActivity(intent);
     }
 
     private void writeNewUser(String name, String email, String password) {

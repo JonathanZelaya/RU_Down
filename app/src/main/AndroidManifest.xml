@@ -22,6 +22,10 @@
         </activity>
         <activity android:name=".SettingsActivity">
         </activity>
+        <activity android:name=".ShowsActivity">
+        </activity>
+        <activity android:name=".VideoGamesListActivity">
+        </activity>
     </application>
 
 </manifest>
