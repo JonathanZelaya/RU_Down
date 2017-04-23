@@ -26,6 +26,8 @@
         </activity>
         <activity android:name=".VideoGamesListActivity">
         </activity>
+        <activity android:name=".EventsActivity">
+        </activity>
     </application>
 
 </manifest>

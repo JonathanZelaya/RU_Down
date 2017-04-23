@@ -47,9 +47,21 @@ public class WaitingRoomActivity extends AppCompatActivity {
 
         ChildEventListener childEventListener = new ChildEventListener() {
             @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String previousChildName) {
+            public void onChildAdded(final DataSnapshot dataSnapshot, String previousChildName) {
                 System.out.println("Child added");
-                users.add(dataSnapshot.getValue().toString() + "\t" + "#: " + phone);
+                /*DatabaseReference refUsers = mDatabase.child("users");
+                refUsers.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot userdb) {
+                        final String guysPhone = userdb.child(dataSnapshot.getKey()).child("phoneNumber").toString();
+                        users.add(dataSnapshot.getValue().toString() + "\t" + "#: " + guysPhone);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                    }
+                });*/
+                users.add(dataSnapshot.getKey().toString());
                 recreateList();
             }
 
@@ -62,7 +74,7 @@ public class WaitingRoomActivity extends AppCompatActivity {
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
                 System.out.println("child remove");
-                users.remove(dataSnapshot.getValue().toString());
+                users.remove(dataSnapshot.getKey().toString());
                 recreateList();
             }
 
@@ -80,6 +92,7 @@ public class WaitingRoomActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference();
         DatabaseReference ref = mDatabase.child("sports").child(sportName).child("users");
         ref.addChildEventListener(childEventListener);
+
         mDatabase.child("sports").child(sportName).child("users").child(email).setValue(name);
 
         TextView header = (TextView) findViewById(R.id.tv_Category);

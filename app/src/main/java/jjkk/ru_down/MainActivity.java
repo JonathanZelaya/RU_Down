@@ -122,6 +122,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void goToEvents(View view){
+        Intent intent = new Intent(this, EventsActivity.class);
+        startActivity(intent);
+    }
+
     private void writeNewUser(String name, String email, String password) {
         email = email.replace(".", "dot");
         User user = new User(name, email, password);
