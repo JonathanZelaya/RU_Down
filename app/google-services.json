@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1062018388386",
+    "firebase_url": "https://ru-down.firebaseio.com",
+    "project_id": "ru-down",
+    "storage_bucket": "ru-down.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062018388386:android:4fa78fce503739e3",
+        "android_client_info": {
+          "package_name": "jjkk.ru_down"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1062018388386-iqiea4k5h42ag2fkc5423ovjo5l3ngk6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "jjkk.ru_down",
+            "certificate_hash": "62354f297825dd2aaa4672b1a6f68e157e8e434d"
+          }
+        },
+        {
+          "client_id": "1062018388386-55s2cbn4nl3tu6uqe7lnmag6nfv2hqj3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXeA0lnHHcvPuUwEwfT8iJsBnbRzlg_yE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1062018388386-55s2cbn4nl3tu6uqe7lnmag6nfv2hqj3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

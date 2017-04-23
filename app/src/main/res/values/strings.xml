@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">RU_Down</string>
+    <string-array name="Campus">
+        <item>No Preference</item>
+        <item>Busch</item>
+        <item>Livingston</item>
+        <item>Douglas/Cook</item>
+        <item>College ave</item>
+    </string-array>
+    <string-array name="Gender">
+        <item>No Preference</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Male</item>
+
+    </string-array>
+</resources>
