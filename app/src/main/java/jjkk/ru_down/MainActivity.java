@@ -93,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
                         String password = passwordET.getText().toString();
 
                         writeNewUser("User",email,password);
-                        storeUserInfo(email);
                     }
                 })
                 .setCancelable(false);

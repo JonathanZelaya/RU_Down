@@ -10,6 +10,7 @@ public class User {
     public String password;
     public String preferredCampus;
     public String preferredGender;
+    public String phone;
 
     public User() {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
@@ -21,8 +22,9 @@ public class User {
         this.password = password;
 
         // Default values
-        preferredCampus = "No Preference";
-        preferredGender = "No Preference";
+        this.preferredCampus = "No Preference";
+        this.preferredGender = "No Preference";
+        this.phone = "";
     }
 
     public String getPreferredCampus() {
@@ -31,5 +33,9 @@ public class User {
 
     public String getPreferredGender() {
         return preferredGender;
+    }
+
+    public String getPhone(){
+        return phone;
     }
 }

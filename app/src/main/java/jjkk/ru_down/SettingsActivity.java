@@ -24,10 +24,12 @@ public class SettingsActivity extends AppCompatActivity {
         String campus = sharedPref.getString("campus",null);
         String gender = sharedPref.getString("gender",null);
         String name = sharedPref.getString("name",null);
+        String phone = sharedPref.getString("phone",null);
 
         Spinner campusSpinner = (Spinner) findViewById(R.id.spin);
         Spinner genderSpinner = (Spinner) findViewById(R.id.spinner2);
         EditText displayName = (EditText) findViewById(R.id.editText);
+        EditText phoneNumber = (EditText) findViewById(R.id.editText2);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Campus, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -46,10 +48,7 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
         displayName.setText(name);
-
-
-
-
+        phoneNumber.setText(phone);
     }
 
     public void save(View view){
@@ -60,20 +59,24 @@ public class SettingsActivity extends AppCompatActivity {
         Spinner campus = (Spinner) findViewById(R.id.spin);
         Spinner gender = (Spinner) findViewById(R.id.spinner2);
         EditText displayName = (EditText) findViewById(R.id.editText);
+        EditText phoneNumber = (EditText) findViewById(R.id.editText2);
 
         String campusString = campus.getSelectedItem().toString();
         String genderString = gender.getSelectedItem().toString();
         String name = displayName.getText().toString();
+        String phone = phoneNumber.getText().toString();
 
         mDatabase.child("users").child(email).child("preferredCampus").setValue(campusString);
         mDatabase.child("users").child(email).child("preferredGender").setValue(genderString);
         mDatabase.child("users").child(email).child("fullName").setValue(name);
+        mDatabase.child("users").child(email).child("phoneNumber").setValue(phone);
 
         SharedPreferences.Editor editor = sharedPref.edit();
 
         editor.putString("campus",campusString);
         editor.putString("gender",genderString);
         editor.putString("name",name);
+        editor.putString("phone",phone);
         editor.commit();
 
         finish();

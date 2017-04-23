@@ -15,6 +15,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import org.w3c.dom.Comment;
 
@@ -47,19 +48,21 @@ public class WaitingRoomActivity extends AppCompatActivity {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String previousChildName) {
                 System.out.println("Child added");
-                recreateList(dataSnapshot);
+                users.add(dataSnapshot.getValue().toString());
+                recreateList();
             }
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String previousChildName) {
                 System.out.println("child changed");
-                recreateList(dataSnapshot);
+                recreateList();
             }
 
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
                 System.out.println("child remove");
-                recreateList(dataSnapshot);
+                users.remove(dataSnapshot.getValue().toString());
+                recreateList();
             }
 
             @Override
@@ -103,15 +106,31 @@ public class WaitingRoomActivity extends AppCompatActivity {
         mDatabase.child("sports").child(sportName).child("users").child(email).setValue(null);
     }
 
-    private void recreateList(DataSnapshot ds){
-        users.clear();
-        ArrayList<String> newList = new ArrayList<String>();
-        Iterator<DataSnapshot> iterator = ds.getChildren().iterator();
+    private void recreateList(){
+        //users.clear();
+        //ArrayList<String> newList = new ArrayList<String>();
+        /*final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference ref = database.getReference("sports/Basketball/users");
+
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        /*Iterator<DataSnapshot> iterator = ds.getChildren().iterator();
+        System.out.println("before the while");
         while(iterator.hasNext()){
+            System.out.println("inside the while");
             newList.add(iterator.next().getValue().toString());
             System.out.println("value : " + iterator.next().getValue().toString());
-        }
-        users.addAll(newList);
+        }*/
+        //users.addAll(newList);
         adapter.notifyDataSetChanged();
 
     }
@@ -122,7 +141,7 @@ public class WaitingRoomActivity extends AppCompatActivity {
         // Build Adapter
         adapter = new ArrayAdapter<String>(
                 this,                   // Context for the activity
-                R.layout.usernames,     // Layout to use (Created)
+                android.R.layout.simple_list_item_1,     // Layout to use (Created)
                 users);                 // Items to be displayed
 
         ListView list = (ListView) findViewById(R.id.lv_Users);
