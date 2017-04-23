@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void storeUserInfo(){
-
+        //mDatabase.addListenerForSingleValueEvent();
     }
 
     private boolean userValid(){
