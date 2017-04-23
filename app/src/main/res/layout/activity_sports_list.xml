@@ -10,14 +10,17 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:weightSum="1">
 
             <TextView
                 android:id="@+id/tv_Title"
@@ -43,7 +46,12 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:backgroundTint="@android:color/holo_orange_light"
+                android:drawableLeft="@mipmap/bb"
+                android:elevation="0dp"
                 android:onClick="enterLobby"
+                android:paddingBottom="20dp"
+                android:paddingLeft="-15dp"
+                android:paddingTop="20dp"
                 android:text="Basketball"
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -59,7 +67,9 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:drawableLeft="@mipmap/socc"
                 android:onClick="enterLobby"
+                android:paddingLeft="-17dp"
                 android:text="Soccer"
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -75,7 +85,11 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:drawableLeft="@mipmap/aa"
+                android:elevation="8dp"
                 android:onClick="enterLobby"
+                android:paddingLeft="0dp"
+                android:paddingTop="10dp"
                 android:text="Football"
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -108,7 +122,9 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:drawableLeft="@mipmap/poool"
                 android:onClick="enterLobby"
+                android:paddingLeft="-7dp"
                 android:text="Pool"
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -140,6 +156,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:drawableLeft="@mipmap/pingg"
                 android:onClick="enterLobby"
                 android:text="Ping Pong"
                 app:layout_constraintLeft_toLeftOf="parent"

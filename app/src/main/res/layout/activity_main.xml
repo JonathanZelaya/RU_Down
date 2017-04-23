@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"/>
+              android:layout_height="match_parent"
+              android:weightSum="1">
 
     <View
         android:layout_width="match_parent"
@@ -25,59 +19,68 @@
         android:layout_height="5dp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="358dp"
+        android:layout_height="112dp">
 
         <Button
-            android:layout_width="0dp"
-            android:layout_height="75dp"
-            android:layout_weight="1"
-            android:text="sports"
             android:id="@+id/bt_sports"
-            android:onClick="goToSports"/>
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/balll"
+            android:onClick="goToSports"
+            android:text="sports" />
 
         <Button
+            android:id="@+id/button3"
             android:layout_width="0dp"
-            android:layout_height="75dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="shows"/>
+            android:drawableTop="@mipmap/ac"
+            android:text="shows" />
 
         <Button
+            android:id="@+id/button5"
             android:layout_width="0dp"
-            android:layout_height="75dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="studying"/>
+            android:drawableTop="@mipmap/books"
+            android:text="studying" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="356dp"
+        android:layout_height="116dp">
 
         <Button
+            android:id="@+id/button2"
             android:layout_width="0dp"
-            android:layout_height="75dp"
-            android:layout_weight="1"
-            android:text="Events"/>
+            android:layout_height="match_parent"
+            android:layout_weight="1.00"
+            android:drawableTop="@mipmap/eve"
+            android:text="Events" />
 
         <Button
-            android:layout_width="0dp"
-            android:layout_height="75dp"
-            android:layout_weight="1"
-            android:text="shows"/>
+            android:id="@+id/button7"
+            android:layout_width="119dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@mipmap/videog"
+            android:text="VIDEO GAMES" />
 
         <Button
+            android:id="@+id/button8"
             android:layout_width="0dp"
-            android:layout_height="75dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="..."/>
+            android:text="..." />
 
 
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="100dp"/>
+        android:layout_height="88dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
