@@ -43,12 +43,13 @@ public class WaitingRoomActivity extends AppCompatActivity {
         SharedPreferences sharedPref = context.getSharedPreferences("sharedPref", context.MODE_PRIVATE);
         String email = sharedPref.getString("email",null);
         String name = sharedPref.getString("name",null);
+        String phone = sharedPref.getString("phone",null);
 
         ChildEventListener childEventListener = new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String previousChildName) {
                 System.out.println("Child added");
-                users.add(dataSnapshot.getValue().toString());
+                users.add(dataSnapshot.getValue().toString() + "\t" + "#: " + phone);
                 recreateList();
             }
 
